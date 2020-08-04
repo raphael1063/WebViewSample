@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity() {
             javaScriptCanOpenWindowsAutomatically = true
             loadWithOverviewMode = true
             textZoom = 100
-            cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK
+            cacheMode = WebSettings.LOAD_DEFAULT
             domStorageEnabled = true
         }
         main_webview.loadUrl(MAIN_URL)
@@ -142,6 +142,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onPageFinished(view: WebView?, url: String?) {
                     super.onPageFinished(view, url)
                     layout_refresh.isRefreshing = false
+                    currentUrl_text.text = url
                 }
             }
 

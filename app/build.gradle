@@ -20,6 +20,16 @@ android {
         enabled = true
     }
 
+    //람다 설정
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -40,4 +50,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     //Timber
     implementation 'com.jakewharton.timber:timber:4.7.1'
+    //Material Design
+    implementation 'com.google.android.material:material:1.1.0'
+    //Swipe Refresh
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 }
